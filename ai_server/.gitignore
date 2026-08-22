@@ -1,0 +1,5 @@
+venv/
+outputs/
+loras/*.safetensors
+__pycache__/
+*.pyc
