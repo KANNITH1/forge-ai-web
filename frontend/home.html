@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home — Forge AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="glow-orb glow-orb-1"></div>
+  <div class="glow-orb glow-orb-2"></div>
+
+  <div class="layout">
+
+    <aside class="sidebar">
+      <a href="home.html" class="logo">Forge <span class="grad-text">AI</span></a>
+      <nav class="side-nav">
+        <a href="home.html" class="nav-item active"><span class="nav-icon">🏠</span> Home</a>
+        <a href="gallery.html" class="nav-item"><span class="nav-icon">🖼️</span> Gallery</a>
+        <a href="history.html" class="nav-item"><span class="nav-icon">🕓</span> History</a>
+        <a href="about.html" class="nav-item"><span class="nav-icon">ℹ️</span> About</a>
+      </nav>
+      <p class="sidebar-footer">Forge AI<br>Distributed System Project</p>
+    </aside>
+
+    <main class="main-content">
+      <div class="container">
+        <header class="hero">
+          <span class="eyebrow">AI IMAGE ENGINE</span>
+          <h1>หลอมจินตนาการ<br>ให้กลายเป็น <span class="grad-text">ภาพจริง</span></h1>
+          <p class="subtitle">พิมพ์สิ่งที่คุณคิด เลือกสไตล์ที่ใช่ แล้วปล่อยให้ Forge AI สร้างสรรค์ให้คุณ</p>
+        </header>
+
+        <section class="panel">
+          <form id="generate-form">
+            <label for="prompt">Prompt</label>
+            <textarea
+              id="prompt"
+              name="prompt"
+              rows="3"
+              placeholder="เช่น a lone astronaut walking on a neon city street"
+              required
+            ></textarea>
+
+            <label class="style-label">เลือกสไตล์ภาพ</label>
+            <div class="style-grid" id="style-grid">
+              <button type="button" class="style-chip active" data-style="realistic">Realistic</button>
+              <button type="button" class="style-chip" data-style="anime">Anime</button>
+              <button type="button" class="style-chip" data-style="oil-painting">Oil Painting</button>
+              <button type="button" class="style-chip" data-style="cyberpunk">Cyberpunk</button>
+              <button type="button" class="style-chip" data-style="watercolor">Watercolor</button>
+            </div>
+
+            <button type="submit" id="submit-btn">
+              <span class="btn-text">สร้างภาพ</span>
+              <span class="btn-spinner"></span>
+            </button>
+          </form>
+
+          <p id="status"></p>
+
+          <div id="result">
+            <img id="result-image" src="" alt="ผลลัพธ์ภาพ AI">
+            <div id="result-actions">
+              <button id="save-btn" type="button">💾 บันทึกลง Gallery</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
